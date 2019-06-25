@@ -1,5 +1,5 @@
 <p align="center">
-    <h1 align="center">Paris High School Investments</h1>
+    <h1 align="center">Paris High Schools Investments</h1>
     <h3 align="center">KPI Intelligence - Full-stack developper test</h3>
 </p>
 
