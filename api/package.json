@@ -11,7 +11,7 @@
     "license": "MIT",
     "scripts": {
         "start": "yarn start:prod",
-        "start:prod": "node -r ts-node/register ./src/index.ts",
+        "start:prod": "node ./dist/index.js",
         "start:dev": "node --inspect=5858 -r ts-node/register ./src/index.ts | pino-pretty",
         "start:watch": "nodemon",
         "build": "yarn clean && tsc",
