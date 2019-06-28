@@ -6,6 +6,8 @@ import fastifySession from 'fastify-session'
 import Mongoose from 'mongoose'
 
 import config from './config'
+import routes from './routes'
+import { InvestmentModel } from './data'
 
 const createServer = async () => {
     console.info(`Creating HTTP server on 'http://${config.server.ip}:${config.server.port}'`)
@@ -26,6 +28,9 @@ const createServer = async () => {
     })
     await server.register(fastifyBlipp)
 
+    // Routes
+    await server.register(routes)
+
     // Listen
     await server.listen(config.server.port, config.server.ip)
 
@@ -37,7 +42,7 @@ const createServer = async () => {
 const connectDatabase = async () => {
     const uri = `mongodb://${config.database.host}:${config.database.port}/${config.database.database}`
 
-    console.log(`Connecting database on '${uri}'...`)
+    console.info(`Connecting database on '${uri}'...`)
 
     await Mongoose.connect(uri, {
         // user: config.database.username,
