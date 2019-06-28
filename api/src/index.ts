@@ -40,8 +40,8 @@ const connectDatabase = async () => {
     console.log(`Connecting database on '${uri}'...`)
 
     await Mongoose.connect(uri, {
-        //user: config.database.username,
-        //pass: config.database.password,
+        // user: config.database.username,
+        // pass: config.database.password,
         useNewUrlParser: true
     })
 
