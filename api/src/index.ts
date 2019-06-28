@@ -3,11 +3,11 @@ import fastify from 'fastify'
 import fastifyBlipp from 'fastify-blipp'
 import fastifyCookie from 'fastify-cookie'
 import fastifySession from 'fastify-session'
+import Mongoose from 'mongoose'
 
 import config from './config'
 
-
-const createServer = async() => {
+const createServer = async () => {
     console.info(`Creating HTTP server on 'http://${config.server.ip}:${config.server.port}'`)
 
     const server = fastify({
@@ -34,10 +34,25 @@ const createServer = async() => {
     await server.blipp()
 }
 
-const main = async() => {
+const connectDatabase = async () => {
+    const uri = `mongodb://${config.database.host}:${config.database.port}/${config.database.database}`
+
+    console.log(`Connecting database on '${uri}'...`)
+
+    await Mongoose.connect(uri, {
+        //user: config.database.username,
+        //pass: config.database.password,
+        useNewUrlParser: true
+    })
+
+    console.info(`Database connected on '${uri}'.`)
+}
+
+const main = async () => {
     try {
+        await connectDatabase()
         await createServer()
-    } catch(e) {
+    } catch (e) {
         console.error(e.message)
         process.exit(1)
     }
