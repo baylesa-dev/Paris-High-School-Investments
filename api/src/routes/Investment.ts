@@ -11,6 +11,11 @@ const routes: Route[] = [
         method: 'GET',
         url: '/investments/:city-:progress',
         handler: Investment.listInvestmentsByCityOrProgress
+    },
+    {
+        method: 'GET',
+        url: '/investments/:id',
+        handler: Investment.getInvestment
     }
 ]
 
