@@ -25,7 +25,7 @@ export type InvestmentSchemaType = {
 export const InvestmentSchema: Schema<InvestmentSchemaType> = new Schema<InvestmentSchemaType> ({
     titreoperation: String,
     entreprise: String,
-    annee_de_livraison: Date,
+    annee_de_livraison: Number,
     ville: String,
     mandataire: String,
     ppi: String,
@@ -35,11 +35,11 @@ export const InvestmentSchema: Schema<InvestmentSchemaType> = new Schema<Investm
     longitude: Number,
     etat_d_avancement: String,
     montant_des_ap_votes_en_meu: Number,
-    cao_attribution: Date,
+    cao_attribution: String,
     latitude: Number,
     maitrise_d_oeuvre: String,
     mode_de_devolution: String,
-    annee_d_individualisation: Date,
+    annee_d_individualisation: Number,
     enveloppe_prev_en_meu: Number
 })
 
