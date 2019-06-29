@@ -1,0 +1,43 @@
+{
+    "name": "phsi-api",
+    "version": "1.0.0",
+    "description": "Paris High Schools Investments application's API",
+    "main": "dist/index.js",
+    "bin": {
+        "api": "./dist/index.js"
+    },
+    "repository": "git@github.com:baylesa-dev/Paris-High-Schools-Investments.git",
+    "author": "baylesa-dev",
+    "license": "MIT",
+    "scripts": {
+        "start": "yarn start:prod",
+        "start:prod": "node ./dist/index.js",
+        "start:dev": "node --inspect=5858 -r ts-node/register ./src/index.ts | pino-pretty",
+        "start:watch": "nodemon",
+        "build": "yarn clean && tsc",
+        "clean": "rm -rf ./dist",
+        "lint": "tslint ./src/**/*.ts"
+    },
+    "devDependencies": {
+        "@types/boom": "^7.2.1",
+        "@types/mongodb": "^3.1.28",
+        "@types/mongoose": "^5.5.6",
+        "@types/node": "^12.0.10",
+        "nodemon": "^1.19.1",
+        "pino-pretty": "^3.2.0",
+        "prettier": "^1.18.2",
+        "ts-node": "^8.3.0",
+        "tslint": "^5.18.0",
+        "tslint-config-prettier": "^1.18.0",
+        "typescript": "^3.5.2"
+    },
+    "dependencies": {
+        "boom": "^7.3.0",
+        "fastify": "^2.6.0",
+        "fastify-auth": "^0.5.0",
+        "fastify-blipp": "^2.0.0",
+        "fastify-cookie": "^3.0.2",
+        "fastify-session": "^3.0.0",
+        "mongoose": "^5.6.1"
+    }
+}
