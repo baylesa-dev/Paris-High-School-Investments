@@ -23,3 +23,12 @@ export const listInvestmentsByCityOrProgress = async (req: Request, res: Respons
         throw boomify(e)
     }
 }
+
+export const getInvestment = async (req: Request, res: Response) => {
+    try {
+        const { id } = req.params
+        return await InvestmentModel.findById(id)
+    } catch (e) {
+        throw boomify(e)
+    }
+}
