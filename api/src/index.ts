@@ -5,9 +5,10 @@ import fastifyCookie from 'fastify-cookie'
 import fastifySession from 'fastify-session'
 import Mongoose from 'mongoose'
 
+
 import config from './config'
 import routes from './routes'
-import { InvestmentModel } from './data'
+import { seedDatabase } from './utils'
 
 const createServer = async () => {
     console.info(`Creating HTTP server on 'http://${config.server.ip}:${config.server.port}'`)
@@ -51,6 +52,9 @@ const connectDatabase = async () => {
     })
 
     console.info(`Database connected on '${uri}'.`)
+    console.info('Checking database content...')
+
+    await seedDatabase()
 }
 
 const main = async () => {
