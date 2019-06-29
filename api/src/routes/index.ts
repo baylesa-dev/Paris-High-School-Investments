@@ -22,9 +22,7 @@ export const registerRoutes = async (
     opts: any,
     next: any
 ) => {
-    for (const route of anonymousRoutes) {
-        fastify.register(registerAnonymousRoutes)
-    }
+    fastify.register(registerAnonymousRoutes)
     next()
 }
 
