@@ -2,6 +2,7 @@ import fastify from 'fastify'
 // @ts-ignore
 import fastifyBlipp from 'fastify-blipp'
 import fastifyCookie from 'fastify-cookie'
+import fastifyCors from 'fastify-cors'
 import fastifySession from 'fastify-session'
 import Mongoose from 'mongoose'
 
@@ -27,6 +28,7 @@ const createServer = async () => {
             secure: false
         }
     })
+    await server.register(fastifyCors)
     await server.register(fastifyBlipp)
 
     // Routes

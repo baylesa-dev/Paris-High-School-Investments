@@ -1,0 +1,46 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint-react"
+    ],
+    "jsRules": {},
+    "rules": {
+        "member-access": false,
+        "semicolon": [true, "never"],
+        "quotemark": [
+            true,
+            "single",
+            "avoid-escape",
+            "avoid-template",
+            "jsx-double"
+        ],
+        "interface-over-type-literal": false,
+        "object-literal-sort-keys": false,
+        "jsx-boolean-value": ["never"],
+        "curly": [true],
+        "no-console": [false],
+        "variable-name": false,
+        "member-ordering": [
+            true,
+            {
+                "order": [
+                    "public-static-field",
+                    "public-constructor",
+                    "private-static-field",
+                    "private-constructor"
+                ]
+            }
+        ],
+        "ordered-imports": true,
+        "no-unused-variable": false,
+        "interface-name": false,
+        "no-conditional-assignment": false
+    },
+    "rulesDirectory": [],
+    "linterOptions": {
+        "exclude": [
+            "config/**/*.js",
+            "node_modules/**/*.ts"
+        ]
+    }
+}
