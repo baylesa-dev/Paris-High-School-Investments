@@ -12,4 +12,4 @@ COPY . /client/
 
 EXPOSE 3000
 
-CMD ["npm", "build"]
+CMD ["yarn", "build"]
