@@ -15,7 +15,6 @@ export class InvestService {
                             if (res.error) {
                                 throw (res.error)
                             } else {
-                                console.log(res)
                                 resolve(res)
                             }
                         })

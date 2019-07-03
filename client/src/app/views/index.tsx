@@ -6,18 +6,18 @@ import { ThemeProvider } from '@material-ui/styles'
 import routes from 'app/routes'
 
 import Appbar from 'app/components/Appbar'
-import Home from './Home'
+import Home from './Home/Home'
 
 import theme from 'app/styles/theme'
 
 
-const Root: React.StatelessComponent<{}> = () => (
+const Root: React.FC<{}> = () => (
     <Fragment>
         <ThemeProvider theme={theme}>
-        <Appbar/>
-        <Switch>
-            <Route path={routes.ROOT} component={Home}/>
-        </Switch>
+            <Appbar />
+            <Switch>
+                <Route path={routes.ROOT} component={Home} />
+            </Switch>
         </ThemeProvider>
     </Fragment>
 )

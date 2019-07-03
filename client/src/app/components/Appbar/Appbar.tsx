@@ -21,7 +21,7 @@ export default function Appbar() {
                         <EuroSymbol />
                     </IconButton>
                     <Typography variant="h5" noWrap className={classes.title}>
-                        High School Investments
+                        Opérations de constuction et de rénovation dans les lycées franciliens
                     </Typography>
                     <div className={classes.search}>
                         <div className={classes.searchIcon}>

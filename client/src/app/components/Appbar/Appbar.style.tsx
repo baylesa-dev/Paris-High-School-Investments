@@ -3,12 +3,12 @@ import { createStyles, fade, Theme, makeStyles } from '@material-ui/core/styles'
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         root: {
-            flexGrow: 1,
+            flexGrow: 1
         },
         appbar: {
             boxShadow: 'none',
             border: 0,
-            backgroundColor: fade(theme.palette.primary.main, 0.8)
+            backgroundColor: fade(theme.palette.primary.main, 0.99)
         },
         iconButton: {
             marginRight: theme.spacing(1),
