@@ -10,7 +10,7 @@
     "author": "baylesa-dev",
     "license": "MIT",
     "scripts": {
-        "start": "yarn start:prod",
+        "start": "yarn build && yarn start:prod",
         "start:prod": "node ./dist/index.js",
         "start:dev": "node --inspect=5858 -r ts-node/register ./src/index.ts | pino-pretty",
         "start:watch": "nodemon",

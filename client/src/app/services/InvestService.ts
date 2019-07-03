@@ -9,7 +9,7 @@ export class InvestService {
                 if (ENABLE_RANDOM_ERRORS && Math.random() > 0.5) {
                     reject(new Error('Error'))
                 } else {
-                    fetch('http://localhost:8080/investments')
+                    fetch('http://0.0.0.0:8080/investments')
                         .then(res => res.json())
                         .then(res => {
                             if (res.error) {

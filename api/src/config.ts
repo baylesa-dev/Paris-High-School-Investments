@@ -1,10 +1,10 @@
 const config = {
     server: {
         port: 8080,
-        ip: 'localhost'
+        ip: '0.0.0.0'
     },
     database: {
-        host: 'localhost',
+        host: 'mongodb',
         port: 27017,
         database: 'phsi',
         username: 'phsi',
